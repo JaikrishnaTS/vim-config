@@ -13,6 +13,8 @@ Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+set tabpagemax=100
+set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
