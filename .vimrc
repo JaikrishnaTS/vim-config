@@ -9,7 +9,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/nerdtree'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
