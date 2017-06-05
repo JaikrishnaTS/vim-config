@@ -1,7 +1,13 @@
 #!/bin/bash
 
+# download .vimrc file
 wget https://raw.githubusercontent.com/JaikrishnaTS/vim-config/master/.vimrc -O $HOME/.vimrc
-mkdir -p $HOME/.vim/colors
+
+# create folders
+mkdir -p $HOME/.vim/colors $HOME/.vim/backup $HOME/.vim/swp
+
+# download monokai color scheme
 wget https://raw.githubusercontent.com/sickill/vim-monokai/master/colors/monokai.vim -O $HOME/.vim/colors/monokai.vim
-git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim
-vim - +PluginInstall +qall
+
+# install the plugins through vim-plug
+vim - +PlugInstall +qall
