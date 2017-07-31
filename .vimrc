@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'tpope/vim-fugitive'
     Plug 'vim-scripts/DoxygenToolkit.vim'
+    Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 " setup vim-airline
@@ -47,12 +48,7 @@ set softtabstop=4
 
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
-colorscheme monokai
-
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+colorscheme jellybeans
 
 set splitbelow
 set splitright
