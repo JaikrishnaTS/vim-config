@@ -8,23 +8,28 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-airline/vim-airline-themes'
     Plug 'tpope/vim-fugitive'
     Plug 'vim-scripts/DoxygenToolkit.vim'
+    Plug 'christoomey/vim-tmux-navigator'
     Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 " setup vim-airline
-if !exists('g:airline_symbols')
-        let g:airline_symbols = {}
-endif
-
 let g:airline_theme='powerlineish'
-" unicode symbols
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_powerline_fonts = 1
 
+" unicode symbols if powerline absent
+" if !exists('g:airline_symbols')
+"         let g:airline_symbols = {}
+" endif
+" 
+" let g:airline_theme='powerlineish'
+" let g:airline_left_sep = '▶'
+" let g:airline_right_sep = '◀'
+" let g:airline_symbols.linenr = '¶'
+" let g:airline_symbols.branch = '⎇'
+" let g:airline_symbols.paste = 'ρ'
+" let g:airline_symbols.whitespace = 'Ξ'
+
+" remove bottom bar
 set noshowmode
 set laststatus=2
 
@@ -46,6 +51,7 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
+set mouse=a
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swp//
 colorscheme jellybeans
