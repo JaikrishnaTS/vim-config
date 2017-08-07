@@ -13,8 +13,16 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " setup vim-airline
-let g:airline_theme='powerlineish'
+let g:airline_theme='hybridline'
 let g:airline_powerline_fonts = 1
+
+" buffer settings
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_min_count = 2
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+set hidden
 
 " unicode symbols if powerline absent
 " if !exists('g:airline_symbols')
